@@ -1,0 +1,9 @@
+<%- include("partials/loggedheader") -%>
+
+<main class="container p-5">
+            
+    <h3>A single share of <%= stock.companyName %> (<%= stock.symbol %>) costs <%= stock.price %></h3>
+    <a class="btn btn-primary" href="/buy">Buy</a>
+
+</main>
+<%- include("partials/footer") -%>

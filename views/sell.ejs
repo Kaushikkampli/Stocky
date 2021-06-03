@@ -1,0 +1,20 @@
+<%- include("partials/loggedheader") -%>
+
+    <div class="container">
+        <form action="/sell" method="POST">
+            <div>
+                <select name = "symbol" class="selectpicker" data-style="btn-primary">
+                    <% stocks.forEach(function(stock){ %>
+                        <option value = <%= stock._id %> ><%= stock._id %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div>
+                    <input class="form-control" type="number" name = "num" placeholder="Shares">
+                    <button type="submit">Sell</button>
+                </form>
+            </div>
+        </form>
+    </div>
+<%- include("partials/footer") -%>

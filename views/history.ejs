@@ -1,0 +1,28 @@
+<%- include("partials/loggedheader.ejs") -%>
+
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0;i < stocks.length; i++) { %>
+            <tr>
+                <th scope="row"><%= i + 1 %></th>
+                <td><%= stocks[i].symbol %></td>
+                <td><%= stocks[i].shares %></td>
+                <td>$<%= stocks[i].price %></td>
+                <td>$<%= stocks[i].time %></td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+</div>
+
+<%- include("partials/footer.ejs") -%>

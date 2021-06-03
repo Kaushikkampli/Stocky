@@ -1,0 +1,10 @@
+<%- include("partials/loggedheader") -%>
+
+    <div class="container">
+        <form class = "mb-3" action="/buy" method="POST">
+            <input class="form-control" type="text" name = "symbol" placeholder="Symbol">
+            <input class="form-control" type="number" name = "num" placeholder="Shares">
+            <button type="submit">Buy</button>
+        </form>
+    </div>
+<%- include("partials/footer") -%>
